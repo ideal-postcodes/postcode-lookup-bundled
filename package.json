@@ -49,7 +49,11 @@
     "Ideal Postcodes"
   ],
   "release": {
-    "extends": "@cablanchard/semantic-release/dist/npm"
+    "extends": "@cablanchard/semantic-release/dist/npm",
+    "branches": [
+      "main",
+      "next"
+    ]
   },
   "license": "AGPL-3.0",
   "devDependencies": {
