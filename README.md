@@ -9,7 +9,7 @@
 
 [![npm version](https://badge.fury.io/js/%40ideal-postcodes%2Fpostcode-lookup-bundled.svg)](https://badge.fury.io/js/%40ideal-postcodes%2Fpostcode-lookup-bundled)
 [![jscdn](https://badgen.net/jsdelivr/v/npm/@ideal-postcodes/postcode-lookup-bundled)](https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled/dist/)
-[![Release](https://github.com/ideal-postcodes/postcode-lookup-bundled/workflows/Release/badge.svg)](https://github.com/ideal-postcodes/postcode-lookup-bundled/actions)
+![Release](https://github.com/ideal-postcodes/postcode-lookup-bundled/workflows/Release/badge.svg)
 
 This package exports polyfilled, minified copies of `postcode-lookup` in various formats available on npm and various JavaScript cdns. It can be readily [dropped in](#usage) on a page without transpilation of `postcode-lookup`.
 
