@@ -67,7 +67,7 @@
     "@rollup/plugin-commonjs": "~16.0.0",
     "@rollup/plugin-node-resolve": "~10.0.0",
     "@types/mocha": "~8.0.0",
-    "@types/puppeteer": "~3.0.0",
+    "@types/puppeteer": "~5.4.0",
     "core-js": "~3.8.0",
     "dotenv": "~8.2.0",
     "http-server": "~0.12.0",
