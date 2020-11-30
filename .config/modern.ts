@@ -29,7 +29,7 @@ module.exports = (config: any): void =>
       moduleDirs: ["node_modules", "dist"],
     },
     files: [
-      { pattern: "test/esm.integration.js", type: "module" },
       { pattern: "dist/postcode-lookup.esm.modern.min.js", type: "module" },
+      { pattern: "test/esm.integration.js", type: "module" },
     ],
   });
