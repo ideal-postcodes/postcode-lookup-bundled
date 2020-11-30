@@ -9,7 +9,7 @@ import { version, devDependencies, license } from "./package.json";
 const input = "node_modules/@ideal-postcodes/postcode-lookup/esm/index.js";
 
 const banner = `/**
- * @license 
+ * @license
  * Ideal Postcodes <https://ideal-postcodes.co.uk>
  * Copyright IDDQD Limited
  * Postcode Lookup Bundled ${version}
@@ -32,10 +32,14 @@ const terserConfig = {
 const include = [
   "node_modules/@ideal-postcodes/core-interface/dist/**",
   "node_modules/@ideal-postcodes/core-axios/dist/**",
-  "node_modules/@ideal-postcodes/postcode-lookup/dist/**",
-  "node_modules/@ideal-postcodes/jsutil/dist/**",
-  "node_modulescapitalise-post-town/dist/**",
+  "node_modules/@ideal-postcodes/postcode-lookup/esm/**",
+  "node_modules/@ideal-postcodes/jsutil/esm/**",
+  "node_modules/capitalise-post-town/dist/**",
 ];
+
+const context = "window";
+
+const sourceMap = false;
 
 export default [
   /**
@@ -51,6 +55,7 @@ export default [
       name: "IdealPostcodes",
       exports: "named", // Disable warning for default imports
     },
+    context,
     plugins: [
       resolve({ browser: true }),
       commonjs(),
@@ -58,6 +63,7 @@ export default [
         babelrc: false,
         ignore: [/core-js/], // Prevent core-js from transforming itself https://github.com/rollup/rollup-plugin-babel/issues/254
         include,
+        sourceMap,
         presets: [
           [
             "@babel/preset-env",
@@ -86,12 +92,13 @@ export default [
       format: "esm",
       exports: "named",
     },
+    context,
     plugins: [
       resolve({ browser: true }),
       commonjs(),
       babel({
         babelrc: false,
-
+        sourceMap,
         ignore: [/core-js/],
         include,
         presets: [
@@ -128,6 +135,7 @@ export default [
       name: "IdealPostcodes",
       exports: "named",
     },
+    context,
     plugins: [
       resolve({ browser: true }),
       commonjs(),
@@ -135,6 +143,7 @@ export default [
         babelrc: false,
         ignore: [/core-js/],
         include,
+        sourceMap,
         presets: [
           [
             "@babel/preset-env",
@@ -146,6 +155,7 @@ export default [
               spec: true,
               useBuiltIns: "usage",
               corejs: 3,
+              forceAllTransforms: true,
             },
           ],
         ],
@@ -164,6 +174,7 @@ export default [
       format: "esm",
       exports: "named",
     },
+    context,
     plugins: [resolve({ browser: true }), commonjs(), terser(terserConfig)],
   },
 ];

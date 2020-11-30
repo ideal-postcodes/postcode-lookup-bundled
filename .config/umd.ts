@@ -18,7 +18,7 @@ module.exports = (config: any): void =>
     browsers: Object.keys(customLaunchers),
     customLaunchers,
     files: [
-      { pattern: "test/umd.integration.ts" },
       "dist/postcode-lookup.umd.min.js",
+      { pattern: "test/umd.integration.ts" },
     ],
   });
