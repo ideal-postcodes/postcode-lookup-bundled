@@ -61,7 +61,6 @@
     "@babel/preset-env": "~7.12.0",
     "@cablanchard/semantic-release": "~1.3.0",
     "@cablanchard/tsconfig": "~2.0.0",
-    "@ideal-postcodes/postcode-lookup": "~1.3.0",
     "@ideal-postcodes/supported-browsers": "~2.5.0",
     "@open-wc/karma-esm": "~3.0.0",
     "@rollup/plugin-commonjs": "~17.0.0",
@@ -87,5 +86,7 @@
     "ts-node": "~9.1.1",
     "typescript": "~4.1.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@ideal-postcodes/postcode-lookup": "~1.3.1"
+  }
 }

@@ -30,8 +30,8 @@ const terserConfig = {
  * Whitelist files processed by Babel
  */
 const include = [
-  "node_modules/@ideal-postcodes/core-interface/dist/**",
-  "node_modules/@ideal-postcodes/core-axios/dist/**",
+  "node_modules/@ideal-postcodes/core-interface/esm/**",
+  "node_modules/@ideal-postcodes/core-axios/esm/**",
   "node_modules/@ideal-postcodes/postcode-lookup/esm/**",
   "node_modules/@ideal-postcodes/jsutil/esm/**",
   "node_modules/capitalise-post-town/dist/**",
@@ -98,9 +98,9 @@ export default [
       commonjs(),
       babel({
         babelrc: false,
-        sourceMap,
         ignore: [/core-js/],
         include,
+        sourceMap,
         presets: [
           [
             "@babel/preset-env",
