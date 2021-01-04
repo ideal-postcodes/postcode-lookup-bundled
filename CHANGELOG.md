@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/ideal-postcodes/postcode-lookup-bundled/compare/1.0.1...1.0.2) (2021-01-04)
+
+
+### Bug Fixes
+
+* **Babel:** Ensure deps are transpiled ([19c9ebb](https://github.com/ideal-postcodes/postcode-lookup-bundled/commit/19c9ebb054e6735cd82f4234be9f564ed44d20b2))
+
 ## [1.0.1](https://github.com/ideal-postcodes/postcode-lookup-bundled/compare/1.0.0...1.0.1) (2021-01-04)
 
 
