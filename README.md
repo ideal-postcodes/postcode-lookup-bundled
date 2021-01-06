@@ -21,25 +21,27 @@ Builds tested against [a suite of modern and legacy, mobile and desktop browsers
 
 Latest and pinned versions of each bundle can be downloaded from [jsdelivr.com](https://www.jsdelivr.com).
 
-We strongly recommend serving your own versioned copy. If served from jsdelivr.com please attach a version number.
+We recommend serving your own versioned copy. If served from a JavaScript CDN like jsdelivr.com you must attach a version number.
 
-### Latest Versions
+### Download Latest Bundle
 
-- [postcode-lookup.umd.min.js@latest](https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled/dist/postcode-lookup.umd.min.js)
-- [postcode-lookup.umd.ie11.min.js@latest](https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled/dist/postcode-lookup.umd.ie11.min.js)
-- [postcode-lookup.esm.min.js@latest](https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled/dist/postcode-lookup.esm.min.js)
-- [postcode-lookup.esm.modern.min.js@latest](https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled/dist/postcode-lookup.esm.modern.min.js)
+- [postcode-lookup.umd.min.js](https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled/dist/postcode-lookup.umd.min.js)
+- [postcode-lookup.umd.ie11.min.js](https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled/dist/postcode-lookup.umd.ie11.min.js)
+- [postcode-lookup.esm.min.js](https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled/dist/postcode-lookup.esm.min.js)
+- [postcode-lookup.esm.modern.min.js](https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled/dist/postcode-lookup.esm.modern.min.js)
 
-### Pinned Versions
+Do not link the above URLs in your scripts. Instead use pinned versions described below.
 
-⚠️ It is important you pin your bundle version in production. Pulling directly from latest may introduce backwards breaking changes.
+### ⚠️ Pinned Versions
+
+It is important you pin your bundle version in production. Pulling directly from latest **will** cause your integration to fail at some point in the future.
 
 Please follow the instructions on [jsdelivr.com/postcode-lookup-bundled](https://www.jsdelivr.com/package/npm/@ideal-postcodes/postcode-lookup-bundled) to pin a specific version in production.
 
-Example `<script>` pinned to version `1.4.0`
+Example `<script>` pinned to version `1.1.0`
 
 ```
-<script src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@1.4.0/dist/postcode-lookup.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@1.1.0/dist/postcode-lookup.umd.min.js"></script>
 ```
 
 ## Links
@@ -64,14 +66,12 @@ Example `<script>` pinned to version `1.4.0`
 
 - **UMD compatible**
 - Transpiles postcode-lookup to target browsers with more than 0.25% marketshare according to [caniuse.com](https://caniuse.com/usage-table). This is a moving target and obselete browsers will lose support over time as new builds are created.
-- Bundled with `fetch` polyfill
 - Default export of the npm module
 
 #### postcode-lookup.umd.ie11.min.js
 
 - **UMD compatible**
 - Transpiles postcode-lookup to target IE11 as minimum browser version. This will create a fixed target bundle over time. The tradeoff to this is larger script payload.
-- Bundled with `fetch` polyfill
 
 #### postcode-lookup.esm.min.js
 
@@ -90,7 +90,7 @@ Example `<script>` pinned to version `1.4.0`
 #### UMD
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled/dist/postcode-lookup.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@1.1.0/dist/postcode-lookup.umd.min.js"></script>
 
 <script>
   PostcodeLookup.setup({
@@ -112,10 +112,10 @@ Example `<script>` pinned to version `1.4.0`
 ```html
 <script
   type="module"
-  src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled/dist/postcode-lookup.esm.min.js"></script>
+  src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@1.1.0/dist/postcode-lookup.esm.min.js"></script>
 
 <script type="module">
-  import { PostcodeLookup } from "https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled/dist/postcode-lookup.esm.min.js";
+  import { PostcodeLookup } from "https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@1.1.0/dist/postcode-lookup.esm.min.js";
   PostcodeLookup.setup({
     apiKey: "iddqd",
     context: "#postcode_lookup_field",
