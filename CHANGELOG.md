@@ -1,3 +1,16 @@
+# [2.0.0](https://github.com/ideal-postcodes/postcode-lookup-bundled/compare/1.1.0...2.0.0) (2021-01-07)
+
+
+### Features
+
+* **Bundle:** Simplify Bundle ([a56e0de](https://github.com/ideal-postcodes/postcode-lookup-bundled/commit/a56e0de0fd78efe41a752eb7698282c6f09d2e66))
+
+
+### BREAKING CHANGES
+
+* **Bundle:** Latest ESM and Modern UMD bundles have been eliminated.
+For better browser targeting use the upstream postcode-lookup project
+
 # [1.1.0](https://github.com/ideal-postcodes/postcode-lookup-bundled/compare/1.0.2...1.1.0) (2021-01-06)
 
 
