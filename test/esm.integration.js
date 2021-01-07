@@ -1,4 +1,4 @@
-import { PostcodeLookup } from "postcode-lookup.esm.min.js";
+import { PostcodeLookup } from "postcode-lookup.esm.js";
 const doc = new DOMParser().parseFromString(
   `
     <html>

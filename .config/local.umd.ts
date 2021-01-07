@@ -23,7 +23,7 @@ module.exports = (config: any): void =>
     basePath,
     browsers: ["ChromeHeadless"],
     files: [
-      { pattern: "dist/postcode-lookup.umd.min.js" },
+      { pattern: "dist/postcode-lookup.js" },
       { pattern: "test/umd.integration.ts" },
     ],
   });

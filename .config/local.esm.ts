@@ -33,7 +33,6 @@ module.exports = (config: any): void =>
     browsers: ["ChromeHeadless"],
     files: [
       { pattern: "test/esm.integration.js", type: "module" },
-      { pattern: "test/umd.integration.js" },
-      { pattern: "dist/postcode-lookup.esm.min.js", type: "module" },
+      { pattern: "dist/postcode-lookup.esm.js", type: "module" },
     ],
   });

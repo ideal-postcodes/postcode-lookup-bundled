@@ -26,11 +26,10 @@
     "test:ie": "karma start .config/ie11.ts",
     "test:umd": "karma start .config/umd.ts",
     "test:esm": "karma start .config/esm.ts",
-    "test:modern": "karma start .config/modern.ts",
     "prepublishOnly": "npm run build"
   },
-  "main": "dist/postcode-lookup.umd.min.js",
-  "module": "dist/postcode-lookup.esm.modern.min.js",
+  "main": "dist/postcode-lookup.js",
+  "module": "dist/postcode-lookup.esm.js",
   "files": [
     "dist"
   ],
