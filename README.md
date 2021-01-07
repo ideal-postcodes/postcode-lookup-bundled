@@ -15,33 +15,26 @@ This package exports polyfilled, minified copies of `postcode-lookup` in various
 
 If you intend to incorporate the browser client in your own bundle, please use [`postcode-lookup`](https://github.com/ideal-postcodes/postcode-lookup) as your `package.json` dependency.
 
-Builds tested against [a suite of modern and legacy, mobile and desktop browsers](https://github.com/ideal-postcodes/supported-browsers).
-
 ## Download
-
-Latest and pinned versions of each bundle can be downloaded from [jsdelivr.com](https://www.jsdelivr.com).
-
-We recommend serving your own versioned copy. If served from a JavaScript CDN like jsdelivr.com you must attach a version number.
 
 ### Download Latest Bundle
 
-- [postcode-lookup.umd.min.js](https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled/dist/postcode-lookup.umd.min.js)
-- [postcode-lookup.umd.ie11.min.js](https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled/dist/postcode-lookup.umd.ie11.min.js)
-- [postcode-lookup.esm.min.js](https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled/dist/postcode-lookup.esm.min.js)
-- [postcode-lookup.esm.modern.min.js](https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled/dist/postcode-lookup.esm.modern.min.js)
+- [postcode-lookup.js](https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled/dist/postcode-lookup.js)
 
-Do not link the above URLs in your scripts. Instead use pinned versions described below.
+Serving your own versioned copy is recommended. If a JavaScript CDN is used (e.g. jsDelivr, cdnjs), be sure to pin the version.
 
-### ⚠️ Pinned Versions
+Use [postcode-lookup.esm.js](https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled/dist/postcode-lookup.esm.js) if you need a ES Module compatible build.
+
+### ⚠️ Pinning Versions
 
 It is important you pin your bundle version in production. Pulling directly from latest **will** cause your integration to fail at some point in the future.
 
-Please follow the instructions on [jsdelivr.com/postcode-lookup-bundled](https://www.jsdelivr.com/package/npm/@ideal-postcodes/postcode-lookup-bundled) to pin a specific version in production.
+For instance, follow the instructions on [jsdelivr.com/postcode-lookup-bundled](https://www.jsdelivr.com/package/npm/@ideal-postcodes/postcode-lookup-bundled) to pin a specific version in production.  E.g.
 
-Example `<script>` pinned to version `1.1.0`
-
-```
-<script src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@1.1.0/dist/postcode-lookup.umd.min.js"></script>
+```html
+<script
+  src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@2.0.0/dist/postcode-lookup.js">
+</script>
 ```
 
 ## Links
@@ -52,45 +45,26 @@ Example `<script>` pinned to version `1.1.0`
 - [npm](https://www.npmjs.com/package/@ideal-postcodes/postcode-lookup-bundled)
 - [GitHub Repository](https://github.com/ideal-postcodes/postcode-lookup-bundled)
 
-## Other JavaScript Clients
-
-- [Postcode Lookup Library](https://github.com/ideal-postcodes/postcode-lookup)
-
 ## Documentation
 
 ### Bundles Overview
 
-`postcode-lookup-bundled` ships 4 javascript bundles.
-
-#### postcode-lookup.umd.min.js
-
-- **UMD compatible**
-- Transpiles postcode-lookup to target browsers with more than 0.25% marketshare according to [caniuse.com](https://caniuse.com/usage-table). This is a moving target and obselete browsers will lose support over time as new builds are created.
-- Default export of the npm module
-
-#### postcode-lookup.umd.ie11.min.js
+#### postcode-lookup.js
 
 - **UMD compatible**
 - Transpiles postcode-lookup to target IE11 as minimum browser version. This will create a fixed target bundle over time. The tradeoff to this is larger script payload.
-
-#### postcode-lookup.esm.min.js
+- Default export of the npm module
 
 - **ES Module compatible**
 - Targets browsers with [ES Module support](https://caniuse.com/#search=module)
 - Default ES Module export
-
-#### postcode-lookup.esm.latest.min.js
-
-- **ES Module compatible**
-- No legacy browser transpilation or polyfills
-- Smallest package size
 
 ### Usage
 
 #### UMD
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@1.1.0/dist/postcode-lookup.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@2.0.0/dist/postcode-lookup.min.js"></script>
 
 <script>
   PostcodeLookup.setup({
@@ -112,10 +86,10 @@ Example `<script>` pinned to version `1.1.0`
 ```html
 <script
   type="module"
-  src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@1.1.0/dist/postcode-lookup.esm.min.js"></script>
+  src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@2.0.0/dist/postcode-lookup.esm.js"></script>
 
 <script type="module">
-  import { PostcodeLookup } from "https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@1.1.0/dist/postcode-lookup.esm.min.js";
+  import { PostcodeLookup } from "https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@2.0.0/dist/postcode-lookup.min.js";
   PostcodeLookup.setup({
     apiKey: "iddqd",
     context: "#postcode_lookup_field",

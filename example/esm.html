@@ -33,7 +33,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.0/milligram.css"
     />
-    <script type="module" src="../dist/postcode-lookup.esm.min.js"></script>
+    <script type="module" src="../dist/postcode-lookup.esm.js"></script>
   </head>
   <body>
     <h1>ESM Demo</h1>
@@ -49,7 +49,7 @@
     <label for="postcode">Postcode</label>
     <input type="text" id="postcode" />
     <script type="module">
-      import { PostcodeLookup } from "../dist/postcode-lookup.esm.min.js";
+      import { PostcodeLookup } from "../dist/postcode-lookup.esm.js";
       PostcodeLookup.setup({
         apiKey: "iddqd",
         context: "#postcode_lookup",
