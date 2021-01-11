@@ -5,7 +5,7 @@
 > JavaScript browser bundles for the Postcode Lookup library
 
 ![CI](https://github.com/ideal-postcodes/postcode-lookup-bundled/workflows/CI/badge.svg)
-![Cross Browser Testing](https://github.com/ideal-postcodes/postcode-lookup-bundled/workflows/Cross%20Browser%20Testing/badge.svg?branch=saucelabs)
+![Cross Browser Testing](https://github.com/ideal-postcodes/postcode-lookup-bundled/workflows/Cross%20Browser%20Testing/badge.svg)
 
 [![npm version](https://badge.fury.io/js/%40ideal-postcodes%2Fpostcode-lookup-bundled.svg)](https://badge.fury.io/js/%40ideal-postcodes%2Fpostcode-lookup-bundled)
 [![jscdn](https://badgen.net/jsdelivr/v/npm/@ideal-postcodes/postcode-lookup-bundled)](https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled/dist/)
