@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/ideal-postcodes/postcode-lookup-bundled/compare/2.0.3...2.1.0) (2021-01-13)
+
+
+### Features
+
+* **deps:** bump @ideal-postcodes/postcode-lookup from 1.4.1 to 1.5.0 ([#61](https://github.com/ideal-postcodes/postcode-lookup-bundled/issues/61)) ([92a75ae](https://github.com/ideal-postcodes/postcode-lookup-bundled/commit/92a75aebdb3e70f8532b9cec5cae1858ce723b16))
+
 ## [2.0.3](https://github.com/ideal-postcodes/postcode-lookup-bundled/compare/2.0.2...2.0.3) (2021-01-12)
 
 
