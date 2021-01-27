@@ -39,3 +39,4 @@ dist/
 # Examples
 **/output/*.js
 .env
+cypress.env.json
