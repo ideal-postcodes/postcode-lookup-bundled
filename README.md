@@ -53,8 +53,10 @@ For instance, follow the instructions on [jsdelivr.com/postcode-lookup-bundled](
 #### postcode-lookup.js
 
 - **UMD compatible**
-- Transpiles postcode-lookup to target IE11 as minimum browser version. This will create a fixed target bundle over time. The tradeoff to this is larger script payload.
+- Transpiles postcode-lookup to target IE11 as minimum browser version
 - Default export of the npm module
+
+#### postcode-lookup.esm.js
 
 - **ES Module compatible**
 - Targets browsers with [ES Module support](https://caniuse.com/#search=module)
