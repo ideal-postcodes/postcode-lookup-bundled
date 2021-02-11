@@ -1,10 +1,16 @@
-import "core-js";
 import babel from "rollup-plugin-babel";
 import { terser } from "rollup-plugin-terser";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
+import inject from "@rollup/plugin-inject";
 
 import { version, dependencies, license } from "./package.json";
+
+export const polyfills = {
+  Promise: "promise-polyfill",
+  Set: "core-js-pure/features/set",
+  "Object.assign": "core-js-pure/features/object/assign",
+};
 
 const input = "node_modules/@ideal-postcodes/postcode-lookup/esm/index.js";
 
@@ -35,6 +41,7 @@ const include = [
   "node_modules/@ideal-postcodes/postcode-lookup/esm/**",
   "node_modules/@ideal-postcodes/jsutil/esm/**",
   "node_modules/capitalise-post-town/dist/**",
+  "node_modules/core-js-pure/**/*",
 ];
 
 const context = "window";
@@ -47,19 +54,24 @@ export default [
    */
   {
     input,
+    context,
     output: {
       file: "./dist/postcode-lookup.esm.js",
       banner,
       format: "esm",
       exports: "named",
     },
-    context,
     plugins: [
-      resolve({ browser: true }),
+      resolve({
+        preferBuiltins: true,
+        dedupe: ["@ideal-postcodes/jsutil"],
+        mainFields: ["browser", "module", "main"],
+        browser: true,
+      }),
       commonjs(),
+      inject(polyfills),
       babel({
         babelrc: false,
-        ignore: [/core-js/],
         include,
         sourceMap,
         presets: [
@@ -72,10 +84,6 @@ export default [
                 chrome: "61",
                 safari: "11",
               },
-              modules: false,
-              spec: true,
-              useBuiltIns: "usage",
-              corejs: 3,
             },
           ],
         ],
@@ -88,6 +96,7 @@ export default [
    */
   {
     input,
+    context,
     output: {
       file: "./dist/postcode-lookup.js",
       banner,
@@ -96,30 +105,20 @@ export default [
       name: "IdealPostcodes",
       exports: "named",
     },
-    context,
     plugins: [
-      resolve({ browser: true }),
+      resolve({
+        preferBuiltins: true,
+        dedupe: ["@ideal-postcodes/jsutil"],
+        mainFields: ["browser", "module", "main"],
+        browser: true,
+      }),
       commonjs(),
+      inject(polyfills),
       babel({
         babelrc: false,
-        ignore: [/core-js/],
         include,
         sourceMap,
-        presets: [
-          [
-            "@babel/preset-env",
-            {
-              targets: {
-                ie: "11",
-              },
-              modules: false,
-              spec: true,
-              useBuiltIns: "usage",
-              corejs: 3,
-              forceAllTransforms: true,
-            },
-          ],
-        ],
+        presets: [["@babel/preset-env", { targets: { ie: "11" } }]],
       }),
       terser(terserConfig),
     ],
