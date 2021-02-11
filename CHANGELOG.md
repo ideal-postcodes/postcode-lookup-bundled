@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/ideal-postcodes/postcode-lookup-bundled/compare/2.2.1...2.2.2) (2021-02-11)
+
+
+### Bug Fixes
+
+* **ESM:** Trim ESM build ([82deeba](https://github.com/ideal-postcodes/postcode-lookup-bundled/commit/82deeba84830d8ed9eb8e52cd53bf422d5225814))
+
 ## [2.2.1](https://github.com/ideal-postcodes/postcode-lookup-bundled/compare/2.2.0...2.2.1) (2021-02-11)
 
 
