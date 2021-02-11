@@ -26,6 +26,7 @@
     "test:ie": "karma start .config/ie11.ts",
     "test:umd": "karma start .config/umd.ts",
     "test:esm": "karma start .config/esm.ts",
+    "test:e2e": "npm run build && cypress run",
     "prepublishOnly": "npm run build"
   },
   "main": "dist/postcode-lookup.js",
@@ -97,7 +98,8 @@
     "semantic-release": "~17.3.0",
     "size-limit": "~4.9.2",
     "ts-node": "~9.1.1",
-    "typescript": "~4.1.3"
+    "typescript": "~4.1.3",
+    "cypress": "~6.3.0"
   },
   "dependencies": {
     "@ideal-postcodes/postcode-lookup": "~1.6.0"
