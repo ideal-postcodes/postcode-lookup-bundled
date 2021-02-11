@@ -69,7 +69,6 @@ export default [
         browser: true,
       }),
       commonjs(),
-      inject(polyfills),
       babel({
         babelrc: false,
         include,
