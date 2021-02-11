@@ -26,6 +26,7 @@
     "test:ie": "karma start .config/ie11.ts",
     "test:umd": "karma start .config/umd.ts",
     "test:esm": "karma start .config/esm.ts",
+    "test:e2e": "npm run build && cypress run",
     "prepublishOnly": "npm run build"
   },
   "main": "dist/postcode-lookup.js",
