@@ -1,6 +1,6 @@
 {
   "name": "@ideal-postcodes/postcode-lookup-bundled",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "JS bundles for Postcode Lookup library",
   "author": {
     "name": "Ideal Postcodes",
