@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/ideal-postcodes/postcode-lookup-bundled/compare/2.2.0...2.2.1) (2021-02-11)
+
+
+### Bug Fixes
+
+* **Build:** Scope polyfills to this package ([f3f7f61](https://github.com/ideal-postcodes/postcode-lookup-bundled/commit/f3f7f61b7d68b684af8107a8589116046b3f200a))
+
 # [2.2.0](https://github.com/ideal-postcodes/postcode-lookup-bundled/compare/2.1.2...2.2.0) (2021-02-02)
 
 
