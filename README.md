@@ -70,7 +70,7 @@ For instance, follow the instructions on [jsdelivr.com/postcode-lookup-bundled](
 <script src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@2.0.0/dist/postcode-lookup.min.js"></script>
 
 <script>
-  PostcodeLookup.setup({
+  IdealPostcodes.PostcodeLookup.setup({
     apiKey: "iddqd",
     context: "#postcode_lookup_field",
     outputFields: {
