@@ -102,6 +102,6 @@
     "cypress": "~6.5.0"
   },
   "dependencies": {
-    "@ideal-postcodes/postcode-lookup": "~1.6.0"
+    "@ideal-postcodes/postcode-lookup": "~1.7.0"
   }
 }
