@@ -102,6 +102,6 @@
     "typescript": "~4.2.3"
   },
   "dependencies": {
-    "@ideal-postcodes/postcode-lookup": "~1.7.2"
+    "@ideal-postcodes/postcode-lookup": "~1.8.1"
   }
 }
