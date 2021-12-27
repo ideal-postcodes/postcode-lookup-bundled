@@ -67,7 +67,7 @@ For instance, follow the instructions on [jsdelivr.com/postcode-lookup-bundled](
 #### UMD
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@2.0.0/dist/postcode-lookup.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@2/dist/postcode-lookup.min.js"></script>
 
 <script>
   IdealPostcodes.PostcodeLookup.setup({
@@ -89,7 +89,7 @@ For instance, follow the instructions on [jsdelivr.com/postcode-lookup-bundled](
 ```html
 <script
   type="module"
-  src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@2.0.0/dist/postcode-lookup.esm.js"></script>
+  src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@2/dist/postcode-lookup.esm.js"></script>
 
 <script type="module">
   import { PostcodeLookup } from "https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@2.0.0/dist/postcode-lookup.min.js";
