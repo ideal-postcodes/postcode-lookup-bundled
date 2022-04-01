@@ -89,10 +89,10 @@ For instance, follow the instructions on [jsdelivr.com/postcode-lookup-bundled](
 ```html
 <script
   type="module"
-  src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@2.0.0/dist/postcode-lookup.esm.js"></script>
+  src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@2/dist/postcode-lookup.esm.js"></script>
 
 <script type="module">
-  import { PostcodeLookup } from "https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@2.0.0/dist/postcode-lookup.min.js";
+  import { PostcodeLookup } from "https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@2/dist/postcode-lookup.min.js";
   PostcodeLookup.setup({
     apiKey: "iddqd",
     context: "#postcode_lookup_field",
