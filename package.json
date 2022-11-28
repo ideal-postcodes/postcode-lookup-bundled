@@ -103,6 +103,6 @@
   },
   "dependencies": {
     "@ideal-postcodes/postcode-lookup": "~1.10.0",
-    "axios": "0.21.1"
+    "axios": "1.2.0"
   }
 }
