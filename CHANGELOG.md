@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/ideal-postcodes/postcode-lookup-bundled/compare/2.2.7...2.3.0) (2023-06-23)
+
+
+### Features
+
+* **version:** Update PL version ti 1.11.1 ([16a2c0e](https://github.com/ideal-postcodes/postcode-lookup-bundled/commit/16a2c0efb651925412764215d9d3f2553002d613))
+
 ## [2.2.7](https://github.com/ideal-postcodes/postcode-lookup-bundled/compare/2.2.6...2.2.7) (2021-09-07)
 
 
