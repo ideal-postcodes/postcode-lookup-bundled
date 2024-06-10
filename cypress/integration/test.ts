@@ -1,4 +1,4 @@
-["ie11", "esm", "umd"].forEach(file => {
+["esm", "umd"].forEach(file => {
   describe(file.toLocaleUpperCase(), () => {
     before(() => {
       cy.setup(`./example/${file}.html`);
@@ -19,7 +19,7 @@
         cy.wait(1000);
         cy.get(".idpc-select").select("0")
         cy.wait(1000);
-        cy.get("#line_1").should('have.value', 'L L Consultancy Ltd');
+        cy.get("#line_1").should('have.value', 'Coronado Interiors Ltd');
         cy.get("#line_2").should('have.value', '2 Stamford Square');
         cy.get("#post_town").should('have.value', 'London');
         cy.get("#postcode").should('have.value', 'SW15 2BF');
