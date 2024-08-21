@@ -1,16 +1,12 @@
-import babel from "rollup-plugin-babel";
-import { terser } from "rollup-plugin-terser";
+import { babel } from "@rollup/plugin-babel";
+import terser from "@rollup/plugin-terser";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
-import inject from "@rollup/plugin-inject";
 
-import { version, dependencies, license } from "./package.json";
+import packageJson from "./package.json" with { type: "json" };
+const { version, license, dependencies } = packageJson;
 
-export const polyfills = {
-  Promise: "promise-polyfill",
-  Set: "core-js-pure/features/set",
-  "Object.assign": "core-js-pure/features/object/assign",
-};
+export const targets = ["last 2 versions"];
 
 const input = "node_modules/@ideal-postcodes/postcode-lookup/esm/index.js";
 
@@ -37,11 +33,9 @@ const terserConfig = {
  */
 const include = [
   "node_modules/@ideal-postcodes/core-interface/esm/**",
-  "node_modules/@ideal-postcodes/core-axios/esm/**",
   "node_modules/@ideal-postcodes/postcode-lookup/esm/**",
   "node_modules/@ideal-postcodes/jsutil/esm/**",
   "node_modules/capitalise-post-town/dist/**",
-  "node_modules/core-js-pure/**/*",
 ];
 
 const context = "window";
@@ -73,19 +67,7 @@ export default [
         babelrc: false,
         include,
         sourceMap,
-        presets: [
-          [
-            "@babel/preset-env",
-            {
-              targets: {
-                edge: "16",
-                firefox: "60",
-                chrome: "61",
-                safari: "11",
-              },
-            },
-          ],
-        ],
+        presets: [["@babel/preset-env", { targets }]],
       }),
       terser(terserConfig),
     ],
@@ -112,12 +94,11 @@ export default [
         browser: true,
       }),
       commonjs(),
-      inject(polyfills),
       babel({
         babelrc: false,
         include,
         sourceMap,
-        presets: [["@babel/preset-env", { targets: { ie: "11" } }]],
+        presets: [["@babel/preset-env", { targets }]],
       }),
       terser(terserConfig),
     ],
