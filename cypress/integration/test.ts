@@ -17,7 +17,7 @@
         cy.get(".idpc-input").clear().type("SW15 2BF");
         cy.get(".idpc-button").click({force: true});
         cy.wait(1000);
-        cy.get(".idpc-select").select("3");
+        cy.get(".idpc-select").select("2");
         cy.wait(1000);
         cy.get("#line_1").should('have.value', 'L L Consultancy Ltd');
         cy.get("#line_2").should('have.value', '2 Stamford Square');
