@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/ideal-postcodes/postcode-lookup-bundled/compare/2.3.0...3.0.0) (2025-02-18)
+
+
+### Features
+
+* **Postcode Lookup:** Upgrade to 3.1.0 ([6b4a216](https://github.com/ideal-postcodes/postcode-lookup-bundled/commit/6b4a21610467d824e57c08b1498111ae7015f3d4))
+
+
+### BREAKING CHANGES
+
+* **Postcode Lookup:** Drop support for IE11. Removed polyfills that enable IE11 support for smaller bundle sizes
+
 # [2.3.0](https://github.com/ideal-postcodes/postcode-lookup-bundled/compare/2.2.7...2.3.0) (2023-06-23)
 
 
